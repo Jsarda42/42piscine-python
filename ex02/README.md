@@ -1,16 +1,15 @@
-# 🧠 Python Function: all_thing_is_obj
+# 🧠 Python Function: `all_thing_is_obj`
 
-This project is a small Python exercise focused on practicing types, conditionals, and function design.
-
-We create a function that checks the type of an object, prints a message depending on that type, and always returns the number `42`. It’s a fun way to get familiar with `isinstance()` and working with Python's built-in types.
+This project is a small Python exercise aimed at practicing object type identification using `isinstance()` and Python conditionals.  
+The goal is to define a function that prints the type of any given object, with special messages for some string values, and always returns the number `42`.
 
 ---
 
-## 🔧 Files
+## 📁 Files
 
 ### `find_ft_type.py`
 
-This file defines the function:
+This file defines the function `all_thing_is_obj()` but does nothing when executed directly.
 
 ```python
 def all_thing_is_obj(object: any) -> int:
@@ -32,13 +31,15 @@ def all_thing_is_obj(object: any) -> int:
     else:
         print("Type not found")
     return 42
-This file does not execute anything when run directly. That’s intentional — the logic only runs when imported from another file.
+```
 
-test.py
-This file is your tester. It imports the function and runs it with different types of values:
+---
 
-python
-Copy code
+### `test.py`
+
+This script imports the function and tests it with different types of objects:
+
+```python
 from find_ft_type import all_thing_is_obj
 
 ft_list = ["Hello", "tata!"]
@@ -53,16 +54,24 @@ all_thing_is_obj(ft_dict)
 all_thing_is_obj("Brian")
 all_thing_is_obj("Toto")
 print(all_thing_is_obj(10))
-▶️ How to Run
-Make sure both files are in the same folder. Then run only the test file:
+```
 
-bash
-Copy code
+---
+
+## ▶️ How to Run
+
+1. Make sure both files are in the same directory.
+2. Run the test file using Python 3:
+
+```bash
 python3 test.py
-You should see the following output:
+```
 
-python
-Copy code
+---
+
+### ✅ Expected Output
+
+```text
 List : <class 'list'>
 Tuple : <class 'tuple'>
 Set : <class 'set'>
@@ -71,22 +80,28 @@ Brian is in the kitchen : <class 'str'>
 Toto is in the kitchen : <class 'str'>
 Type not found
 42
-If you try to run find_ft_type.py by itself:
+```
 
-bash
-Copy code
+If you run `find_ft_type.py` by itself:
+
+```bash
 python3 find_ft_type.py
-It will do nothing — and that’s the expected behavior.
+```
 
-✅ Summary
-The function checks the type of an object and prints a custom message.
+It will do nothing. This is expected, since the logic is only called from the test file.
 
-It handles list, tuple, set, dict, and specific strings like "Brian" and "Toto".
+---
 
-Anything else prints "Type not found".
+## 🧾 Summary
 
-It always returns the integer 42.
+- The function checks the type of an object.
+- It prints a message for lists, tuples, sets, dicts, and for specific strings `"Brian"` and `"Toto"`.
+- Any unhandled input results in `"Type not found"`.
+- The function always returns the integer `42`.
 
-This is a great warm-up for understanding Python's type system and conditionals.
+This is a great warm-up for understanding Python's object model and type handling.
+
+---
+
 
 
