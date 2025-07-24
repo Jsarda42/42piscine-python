@@ -17,6 +17,18 @@ This Python program analyzes a given text and prints the number of:
 - How to separate logic using a clean `main()` function and helper modules.
 - Exception handling for clean exit (`EOFError`, `AssertionError`).
 - Writing modular and user-friendly CLI tools in Python.
+- Writing and using **docstrings** (`__doc__`) to document functions and modules for better code understanding and maintainability.
+
+## 📖 Docstrings (`__doc__`)
+
+Docstrings are special strings placed right below function, class, or module definitions that describe their purpose. They are accessible via the `__doc__` attribute and help users understand the code without reading the implementation.
+
+Example of accessing docstrings:
+```python
+import counter
+help(counter.counter)           # Shows detailed documentation
+print(counter.counter.__doc__)  # Prints the docstring text directly.
+```
 
 ## 🚀 Usage
 
